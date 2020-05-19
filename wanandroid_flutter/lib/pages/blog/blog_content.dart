@@ -25,6 +25,6 @@ class _YBBlogContentState extends State<YBBlogContent> {
   }
   @override
   Widget build(BuildContext context) {
-    return YBListPage(itemModels:_modelList);
+    return YBListPage(itemModels:_modelList, key: UniqueKey(),);
   }
 }

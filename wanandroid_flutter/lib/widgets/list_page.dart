@@ -11,7 +11,7 @@ class YBListPage extends StatefulWidget {
   final String classifyId;
   final List<YBArticleItemModel> itemModels;
   final bool isWehatPage;
-  YBListPage({String classifyId, List<YBArticleItemModel> itemModels, bool isWechatPage}) : this.classifyId = classifyId, this.itemModels = itemModels ?? [], this.isWehatPage = isWechatPage ?? false;
+  YBListPage({String classifyId, List<YBArticleItemModel> itemModels, bool isWechatPage, Key key}) : this.classifyId = classifyId, this.itemModels = itemModels ?? [], this.isWehatPage = isWechatPage ?? false, super(key:key);
 
   @override
   _YBListPageState createState() => _YBListPageState();
@@ -43,7 +43,10 @@ class _YBListPageState extends State<YBListPage> with AutomaticKeepAliveClientMi
           });
         }
       } else {
-        _itemModels.addAll(widget.itemModels);
+        print(widget.itemModels);
+        setState(() {
+          _itemModels.addAll(widget.itemModels);
+        });
       }
 
     _scrollController.addListener(() {
