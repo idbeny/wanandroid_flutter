@@ -14,7 +14,7 @@ def translate():
     print('Begin translate...')
 
     code = """
-import 'package:flutter/widgets.dart';
+import 'package:flutter/ui.widgets.dart';
 
 
 // 代码由程序自动生成。
